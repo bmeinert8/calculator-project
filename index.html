@@ -4,96 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Calculator</title>
+  <link rel="stylesheet" href="./10-calculator.css">
+  <script defer src="./main.js"></script>
 </head>
 <body>
-  <p class="js-calculation-output"></p>
+  <p class="js-calculation-output calculation"></p>
   <p>
     <button onclick="
       updateCalculation('1');
-      ">1</button>
+      " class="number">1</button>
     <button onclick="
       updateCalculation('2');
-    ">2</button>
+    " class="number">2</button>
     <button onclick="
       updateCalculation('3');
-    ">3</button>
+    " class="number">3</button>
     <button onclick="
       updateCalculation(' + ');
-    ">+</button>
+    " class="symbol">+</button>
   </p>
   <p>
     <button onclick="
       updateCalculation('4');
-      ">4</button>
+      "class=number>4</button>
     <button onclick="
       updateCalculation('5');
-    ">5</button>
+    " class="number">5</button>
     <button onclick="
       updateCalculation('6');
-    ">6</button>
+    " class="number">6</button>
     <button onclick="
       updateCalculation(' - ');
-    ">-</button>
+    " class="symbol">-</button>
   </p>
   <p>
     <button onclick="
       updateCalculation('7');
-      ">7</button>
+      " class="number">7</button>
     <button onclick="
       updateCalculation('8');
-    ">8</button>
+    " class="number">8</button>
     <button onclick="
       updateCalculation('9');
-    ">9</button>
+    " class="number">9</button>
     <button onclick="
       updateCalculation(' * ');
-    ">*</button>
+    " class="symbol">*</button>
   </p>
   <p>
     <button onclick="
       updateCalculation('0');
-      ">0</button>
+      " class="number">0</button>
     <button onclick="
       updateCalculation('.');
-    ">.</button>
+    " class="symbol ">.</button>
     <button onclick="
       updateCalculation('=');
-    ">=</button>
+    " class="symbol">=</button>
     <button onclick="
       updateCalculation(' / ');
-    ">/</button>
+    " class="symbol">/</button>
   </p>
   <p>
     <button onclick="
       updateCalculation('clear');
-      
-      ">clear</button>
+      " class="clear">Clear</button>
   </p>
-
-
-  
-
-  <script>
-    let calculation = localStorage.getItem('calculation') || '';
-    displayCalculation();
-    
-    function updateCalculation(input) {
-      if (input === '=') {
-        calculation = eval(calculation);
-      } else if (input === 'clear') {
-        calculation = '';
-        console.log('Cleared.');
-      } else {
-      calculation += input;
-      }
-      displayCalculation();
-
-      localStorage.setItem('calculation', calculation);
-    }
-
-    function displayCalculation() {
-      document.querySelector('.js-calculation-output').innerHTML = calculation;
-    }
-  </script>
 </body>
 </html>
