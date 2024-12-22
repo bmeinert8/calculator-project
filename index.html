@@ -73,8 +73,8 @@
   
 
   <script>
-    let calculation = "";
-
+    let calculation = localStorage.getItem('calculation') || '';
+    console.log(calculation);
     function updateCalculation(input) {
       if (input === '=') {
         calculation = eval(calculation);
@@ -85,6 +85,8 @@
       calculation += input;
       }
       console.log(calculation);
+
+      localStorage.setItem('calculation', calculation);
     }
   </script>
 </body>
