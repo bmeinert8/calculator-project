@@ -6,6 +6,7 @@
   <title>JS Calculator</title>
 </head>
 <body>
+  <p class="js-calculation-output"></p>
   <p>
     <button onclick="
       updateCalculation('1');
@@ -74,7 +75,8 @@
 
   <script>
     let calculation = localStorage.getItem('calculation') || '';
-    console.log(calculation);
+    displayCalculation();
+    
     function updateCalculation(input) {
       if (input === '=') {
         calculation = eval(calculation);
@@ -84,9 +86,13 @@
       } else {
       calculation += input;
       }
-      console.log(calculation);
+      displayCalculation();
 
       localStorage.setItem('calculation', calculation);
+    }
+
+    function displayCalculation() {
+      document.querySelector('.js-calculation-output').innerHTML = calculation;
     }
   </script>
 </body>
