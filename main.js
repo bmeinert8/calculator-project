@@ -7,6 +7,8 @@ let calculation = localStorage.getItem('calculation') || '';
       } else if (input === 'clear') {
         calculation = '';
         console.log('Cleared.');
+      } else if (input === 'delete') {
+        calculation = calculation.slice(0, -1);
       } else {
       calculation += input;
       }
