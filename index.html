@@ -4,71 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Calculator</title>
-  <link rel="stylesheet" href="./10-calculator.css">
+  <link rel="stylesheet" href="./styles.css">
   <script defer src="./main.js"></script>
 </head>
 <body>
-  <p class="js-calculation-output calculation"></p>
-  <p>
-    <button onclick="
-      updateCalculation('1');
-      " class="number">1</button>
-    <button onclick="
-      updateCalculation('2');
-    " class="number">2</button>
-    <button onclick="
-      updateCalculation('3');
-    " class="number">3</button>
-    <button onclick="
-      updateCalculation(' + ');
-    " class="symbol">+</button>
-  </p>
-  <p>
-    <button onclick="
-      updateCalculation('4');
-      "class=number>4</button>
-    <button onclick="
-      updateCalculation('5');
-    " class="number">5</button>
-    <button onclick="
-      updateCalculation('6');
-    " class="number">6</button>
-    <button onclick="
-      updateCalculation(' - ');
-    " class="symbol">-</button>
-  </p>
-  <p>
-    <button onclick="
-      updateCalculation('7');
-      " class="number">7</button>
-    <button onclick="
-      updateCalculation('8');
-    " class="number">8</button>
-    <button onclick="
-      updateCalculation('9');
-    " class="number">9</button>
-    <button onclick="
-      updateCalculation(' * ');
-    " class="symbol">*</button>
-  </p>
-  <p>
-    <button onclick="
-      updateCalculation('0');
-      " class="number">0</button>
-    <button onclick="
-      updateCalculation('.');
-    " class="symbol ">.</button>
-    <button onclick="
-      updateCalculation('=');
-    " class="symbol">=</button>
-    <button onclick="
-      updateCalculation(' / ');
-    " class="symbol">/</button>
-  </p>
-  <p>
-    <button onclick="
-      updateCalculation('clear');
-      " class="clear">Clear</button>
-  </p>
+  <main class="calculator-body">
+    <div class="calculation-window">
+      <p class="js-calculation-output calculation"></p>
+    </div>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+        " class="number">1</button>
+      <button onclick="
+        updateCalculation('2');
+      " class="number">2</button>
+      <button onclick="
+        updateCalculation('3');
+      " class="number">3</button>
+      <button onclick="
+        updateCalculation(' + ');
+      " class="symbol">+</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCalculation('4');
+        "class=number>4</button>
+      <button onclick="
+        updateCalculation('5');
+      " class="number">5</button>
+      <button onclick="
+        updateCalculation('6');
+      " class="number">6</button>
+      <button onclick="
+        updateCalculation(' - ');
+      " class="symbol">-</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCalculation('7');
+        " class="number">7</button>
+      <button onclick="
+        updateCalculation('8');
+      " class="number">8</button>
+      <button onclick="
+        updateCalculation('9');
+      " class="number">9</button>
+      <button onclick="
+        updateCalculation(' * ');
+      " class="symbol">*</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCalculation('0');
+        " class="number">0</button>
+      <button onclick="
+        updateCalculation('.');
+      " class="symbol ">.</button>
+      <button onclick="
+        updateCalculation('=');
+      " class="symbol">=</button>
+      <button onclick="
+        updateCalculation(' / ');
+      " class="symbol">/</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCalculation('clear');
+        " class="bottom-button">Clear</button>
+      <button onclick="updateCalculation('delete')" class="bottom-button">Delete</button>
+    </p>
+</main>
 </body>
 </html>
