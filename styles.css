@@ -9,33 +9,37 @@ body {
   margin: 0;
 }
 
-button{
+button {
   height: 50px;
   width: 50px;
-  border:none;
+  border: none;
   color: white;
   font-size: 25px;
-  margin-left: 10px
+  margin-left: 10px;
 }
 
 .calculation {
-  font-size: 45px;
+  font-size: 30px;
   padding: 10px;
   margin: 0;
   padding: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.number{
+.number {
   background-color: rgb(48, 48, 48);
   border-radius: 50%;
 }
 
-.symbol{
+.symbol {
   background-color: rgb(255, 165, 0);
   border-radius: 50%;
 }
 
-.bottom-button{
+.bottom-button {
   width: 115px;
   background-color: rgb(255, 0, 0);
   border-radius: 20px;
@@ -51,6 +55,7 @@ button{
   width: 245px;
   height: 60px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .calculator-body {
@@ -64,4 +69,3 @@ button{
 .calculator-body p {
   margin-left: 18px;
 }
-

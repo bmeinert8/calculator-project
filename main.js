@@ -17,7 +17,7 @@ function updateCalculation(input) {
   } else if (input === 'delete') {
     calculation = calculation.slice(0, -1);
   } else {
-  calculation += input;
+    calculation += input;
   }
   displayCalculation();
 
@@ -25,5 +25,18 @@ function updateCalculation(input) {
 }
 
 function displayCalculation() {
-  document.querySelector('.js-calculation-output').innerHTML = calculation;
+  const outputElement = document.querySelector('.js-calculation-output');
+  outputElement.innerHTML = calculation;
+  adjustFontSize(outputElement);
+}
+
+function adjustFontSize(element) {
+  const maxWidth = element.parentElement.clientWidth;
+  let fontSize = 30; // Initial font size
+  element.style.fontSize = fontSize + 'px';
+
+  while (element.scrollWidth > maxWidth && fontSize > 10) {
+    fontSize -= 1;
+    element.style.fontSize = fontSize + 'px';
+  }
 }
