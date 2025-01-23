@@ -1,16 +1,40 @@
 let calculation = localStorage.getItem('calculation') || '';
-    displayCalculation();
+displayCalculation();
 
-document.querySelectorAll('.js-calc-button')
-  .forEach(button => {
-    button.addEventListener('click', () => {
-      updateCalculation(button.getAttribute('data-value'));
-    });
+document.querySelectorAll('.js-calc-button').forEach(button => {
+  button.addEventListener('click', () => {
+    updateCalculation(button.getAttribute('data-value'));
   });
-    
+});
+
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if (key >= '0' && key <= '9') {
+    updateCalculation(key);
+  } else if (key === '+') {
+    updateCalculation(' + ');
+  } else if (key === '-') {
+    updateCalculation(' - ');
+  } else if (key === '*') {
+    updateCalculation(' * ');
+  } else if (key === '/') {
+    updateCalculation(' / ');
+  } else if (key === 'Enter') {
+    updateCalculation('=');
+  } else if (key === 'Backspace') {
+    updateCalculation('delete');
+  } else if (key === 'Escape') {
+    updateCalculation('clear');
+  }
+});
+
 function updateCalculation(input) {
   if (input === '=') {
-    calculation = eval(calculation);
+    try {
+      calculation = eval(calculation);
+    } catch (e) {
+      calculation = 'Error';
+    }
   } else if (input === 'clear') {
     calculation = '';
     console.log('Cleared.');
