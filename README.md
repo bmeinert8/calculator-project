@@ -1,5 +1,8 @@
 # JS Calculator
 
+## Project Documentation
+[Documenting the build, challenges, and future updates of the project.](https://dev.to/bmeinert8/javascript-calculator-project-19od)
+
 ## Project Overview
 This is a simple JavaScript calculator that allows users to perform basic arithmetic operations. The calculator can be operated using both mouse clicks and keyboard inputs.
 
